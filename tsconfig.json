@@ -1,23 +1,13 @@
 {
-  "include": ["client/src/**/*", "shared/**/*", "server/**/*"],
-  "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
   "compilerOptions": {
-    "incremental": true,
-    "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
-    "noEmit": true,
-    "module": "ESNext",
-    "strict": true,
-    "lib": ["esnext", "dom", "dom.iterable"],
-    "jsx": "preserve",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "module": "CommonJS",
+    "target": "ES2020",
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
-    "moduleResolution": "bundler",
-    "baseUrl": ".",
-    "types": ["node", "vite/client"],
-    "paths": {
-      "@/*": ["./client/src/*"],
-      "@shared/*": ["./shared/*"]
-    }
-  }
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["index.ts", "routes.ts", "vite.ts", "services/**/*.ts", "proxy-scanner.ts", "routes-scanner.ts", "routes-url-validator.ts"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
